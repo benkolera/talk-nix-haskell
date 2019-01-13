@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Haskell Packages with Nix</title>
+<meta name="author" content="(Ben Kolera)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="./reveal.js/css/reveal.css"/>
+
+<link rel="stylesheet" href="./reveal.js/css/theme/black.css" id="theme"/>
+
+<link rel="stylesheet" href="custom.css"/>
+<link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="./images/nix-wallpaper-stripes-logo.png"><div class='title'><h1>Haskell Packages with Nix</h1><h2>Ben Kolera</h2></div>
+</section>
+
+<section>
+<section id="slide-org40b8c13">
+<h2 id="org40b8c13">Intro</h2>
+<p>
+(Note: speaker notes are accessible by pressing "s" or reading the org file directly)
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org3b94cde">
+<h2 id="org3b94cde">Further Reading</h2>
+<div class="outline-text-2" id="text-org3b94cde">
+</div>
+</section>
+<section id="slide-orgcd21bc5">
+<h3 id="orgcd21bc5">Come chat to us at QFPL :)</h3>
+<p>
+We are here to make this stuff easier. Join us on IRC or drop in upstairs for some coaching.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org5df5150">
+<h2 id="org5df5150">Thanks!</h2>
+<p>
+<a href="https://haskell-nix.benkolera.com">https://haskell-nix.benkolera.com</a>
+</p>
+
+
+<small><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</small>
+</section>
+</section>
+</div>
+</div>
+<script src="./reveal.js/lib/js/head.min.js"></script>
+<script src="./reveal.js/js/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: true,
+slideNumber: false,
+rollingLinks: false,
+keyboard: true,
+overview: true,
+
+theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+transitionSpeed: 'default',
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: './reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+ { src: './reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: Oswald;
+    src: url(fonts/Oswald/Oswald-Regular.ttf);
+}
+@font-face {
+    font-family: OpenSans;
+    src: url(fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+
+h1,h2,h3,h4,h5 {
+    font-family: Oswald, sans-serif !important;
+    text-transform: none !important;
+    font-weight: 400 !important;
+}
+
+body {
+    font-family: OpenSans, sans-serif !important;
+}
+
+.title {
+}

@@ -1,0 +1,22 @@
+#+OPTIONS: num:nil toc:nil reveal_slide_number:nil
+#+REVEAL_TRANS: default
+#+REVEAL_THEME: black
+#+Title: Haskell Packages with Nix
+#+Author: Ben Kolera
+#+Email: @benkolera
+#+REVEAL_ROOT: ./reveal.js/
+#+REVEAL_TITLE_SLIDE_BACKGROUND:./images/nix-wallpaper-stripes-logo.png
+#+REVEAL_PLUGINS: (highlight notes)
+#+REVEAL_EXTRA_CSS:custom.css
+
+* Intro
+ (Note: speaker notes are accessible by pressing "s" or reading the org file directly)
+* Further Reading
+** Come chat to us at QFPL :)
+   We are here to make this stuff easier. Join us on IRC or drop in upstairs for some coaching.
+* Thanks!
+
+  https://haskell-nix.benkolera.com
+
+
+#+REVEAL_HTML: <small><a rel="license" href="http://creativecommons.org/licenses/by/3.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/3.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</small>
