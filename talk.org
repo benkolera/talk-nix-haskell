@@ -11,7 +11,54 @@
 
 * Intro
  (Note: speaker notes are accessible by pressing "s" or reading the org file directly)
+* What is nix
+** nix
+** nixpkgs
+* Why Nix?
+** Reproducability
+** Being able to patch upstream deps
+** Cross machine sharable binary caching
+   Stack and cabal-new don't do this.
+** You have a library with a crazy amount of build configuration
+   e.g reflex-platform
+** You develop on nixos
+** You a building a reflex app. :)
+* Why Not Nix?
+** You develop on windows
+** You develop on mac
+   And are short of patience (it kinda works)
+** Cabal new with freeze or stack works for you
+** You are writing libraries for hackage / stackage
+* Basic Structure
+** cabal2nix
+** default.nix
+** shell.nix
+** nix pinning
+** building / testing code
+* Nix 'Versioning' & Haskell Overrides
+** There are no versions! Just expressions in haskellPackages
+** Overrides
+** Call hackage
+** Fetch from github
+** But this doesn't compose transitively!
+* Overlays
+**
+* CI / Caching
+** Hydra
+** Hercules
+** Traditional CI + Cache Uploading
+** Cachix
+* Deployment
+** Docker
+** Nixops
+* Problems
+** No type system
+** Caching issues can be weird
+* Future
+** Nixos Modules
 * Further Reading
+** Haskell Section of the Nixpkgs Docs
+   https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/haskell.section.md
 ** Come chat to us at QFPL :)
    We are here to make this stuff easier. Join us on IRC or drop in upstairs for some coaching.
 * Thanks!
