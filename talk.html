@@ -31,29 +31,215 @@
 </section>
 
 <section>
-<section id="slide-org40b8c13">
-<h2 id="org40b8c13">Intro</h2>
+<section id="slide-orge8e5145">
+<h2 id="orge8e5145">Intro</h2>
 <p>
 (Note: speaker notes are accessible by pressing "s" or reading the org file directly)
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org3b94cde">
-<h2 id="org3b94cde">Further Reading</h2>
-<div class="outline-text-2" id="text-org3b94cde">
+<section id="slide-org7d6e3ea">
+<h2 id="org7d6e3ea">What is nix</h2>
+<div class="outline-text-2" id="text-org7d6e3ea">
 </div>
 </section>
-<section id="slide-orgcd21bc5">
-<h3 id="orgcd21bc5">Come chat to us at QFPL :)</h3>
+<section id="slide-org36327ed">
+<h3 id="org36327ed">nix</h3>
+<ul>
+<li class="fragment appear">Pure, lazy functional language</li>
+<li class="fragment appear">Package manager of immutable artifacts</li>
+<li class="fragment appear">Instead of mutating /usr/bin everything goes to /nix/store</li>
+<li class="fragment appear">Mutate the environment to point to the nix store instead</li>
+
+</ul>
+</section>
+<section id="slide-orgcfaecc4">
+<h3 id="orgcfaecc4">nixpkgs</h3>
+</section>
+</section>
+<section>
+<section id="slide-orge878577">
+<h2 id="orge878577">Why Nix?</h2>
+<div class="outline-text-2" id="text-orge878577">
+</div>
+</section>
+<section id="slide-org8b31132">
+<h3 id="org8b31132">Reproducability</h3>
+</section>
+<section id="slide-orga4fcc22">
+<h3 id="orga4fcc22">Being able to patch upstream deps</h3>
+</section>
+<section id="slide-org18f4f85">
+<h3 id="org18f4f85">Cross machine sharable binary caching</h3>
+<p>
+Stack and cabal-new don't do this.
+</p>
+</section>
+<section id="slide-orga2eefd6">
+<h3 id="orga2eefd6">You have a library with a crazy amount of build configuration</h3>
+<p>
+e.g reflex-platform
+</p>
+</section>
+<section id="slide-orgea79fd1">
+<h3 id="orgea79fd1">You develop on nixos</h3>
+</section>
+<section id="slide-org8f058f7">
+<h3 id="org8f058f7">You a building a reflex app. :)</h3>
+</section>
+</section>
+<section>
+<section id="slide-org5b0c26d">
+<h2 id="org5b0c26d">Why Not Nix?</h2>
+<div class="outline-text-2" id="text-org5b0c26d">
+</div>
+</section>
+<section id="slide-orgf5771e5">
+<h3 id="orgf5771e5">You develop on windows</h3>
+</section>
+<section id="slide-org81ed06b">
+<h3 id="org81ed06b">You develop on mac</h3>
+<p>
+And are short of patience (it kinda works)
+</p>
+</section>
+<section id="slide-orgadd6458">
+<h3 id="orgadd6458">Cabal new with freeze or stack works for you</h3>
+</section>
+<section id="slide-orga1269d5">
+<h3 id="orga1269d5">You are writing libraries for hackage / stackage</h3>
+</section>
+</section>
+<section>
+<section id="slide-org3e3e09f">
+<h2 id="org3e3e09f">Basic Structure</h2>
+<div class="outline-text-2" id="text-org3e3e09f">
+</div>
+</section>
+<section id="slide-orge49a876">
+<h3 id="orge49a876">cabal2nix</h3>
+</section>
+<section id="slide-orgf2f37b1">
+<h3 id="orgf2f37b1">default.nix</h3>
+</section>
+<section id="slide-org7b347a2">
+<h3 id="org7b347a2">shell.nix</h3>
+</section>
+<section id="slide-org0bf624b">
+<h3 id="org0bf624b">nix pinning</h3>
+</section>
+<section id="slide-orgceae80d">
+<h3 id="orgceae80d">building / testing code</h3>
+</section>
+</section>
+<section>
+<section id="slide-org1d69f21">
+<h2 id="org1d69f21">Nix 'Versioning' &amp; Haskell Overrides</h2>
+<div class="outline-text-2" id="text-org1d69f21">
+</div>
+</section>
+<section id="slide-orgf404010">
+<h3 id="orgf404010">There are no versions! Just expressions in haskellPackages</h3>
+</section>
+<section id="slide-org3f90859">
+<h3 id="org3f90859">Overrides</h3>
+</section>
+<section id="slide-orgdc21193">
+<h3 id="orgdc21193">Call hackage</h3>
+</section>
+<section id="slide-orgc319a1b">
+<h3 id="orgc319a1b">Fetch from github</h3>
+</section>
+<section id="slide-orgaf38765">
+<h3 id="orgaf38765">But this doesn't compose transitively!</h3>
+</section>
+</section>
+<section>
+<section id="slide-org1b469fe">
+<h2 id="org1b469fe">Overlays</h2>
+<p>
+**
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org8743e51">
+<h2 id="org8743e51">CI / Caching</h2>
+<div class="outline-text-2" id="text-org8743e51">
+</div>
+</section>
+<section id="slide-org4955f2b">
+<h3 id="org4955f2b">Hydra</h3>
+</section>
+<section id="slide-org3df0f47">
+<h3 id="org3df0f47">Hercules</h3>
+</section>
+<section id="slide-orge1eeb38">
+<h3 id="orge1eeb38">Traditional CI + Cache Uploading</h3>
+</section>
+<section id="slide-org7703223">
+<h3 id="org7703223">Cachix</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgf0806e7">
+<h2 id="orgf0806e7">Deployment</h2>
+<div class="outline-text-2" id="text-orgf0806e7">
+</div>
+</section>
+<section id="slide-org8866ff1">
+<h3 id="org8866ff1">Docker</h3>
+</section>
+<section id="slide-orgfc569f9">
+<h3 id="orgfc569f9">Nixops</h3>
+</section>
+</section>
+<section>
+<section id="slide-orge5a0152">
+<h2 id="orge5a0152">Problems</h2>
+<div class="outline-text-2" id="text-orge5a0152">
+</div>
+</section>
+<section id="slide-org6de2f45">
+<h3 id="org6de2f45">No type system</h3>
+</section>
+<section id="slide-org9eebfc6">
+<h3 id="org9eebfc6">Caching issues can be weird</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgce02d95">
+<h2 id="orgce02d95">Future</h2>
+<div class="outline-text-2" id="text-orgce02d95">
+</div>
+</section>
+<section id="slide-org1ec57a0">
+<h3 id="org1ec57a0">Nixos Modules</h3>
+</section>
+</section>
+<section>
+<section id="slide-orgd606cbc">
+<h2 id="orgd606cbc">Further Reading</h2>
+<div class="outline-text-2" id="text-orgd606cbc">
+</div>
+</section>
+<section id="slide-org798444f">
+<h3 id="org798444f">Haskell Section of the Nixpkgs Docs</h3>
+<p>
+<a href="https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/haskell.section.md">https://github.com/NixOS/nixpkgs/blob/master/doc/languages-frameworks/haskell.section.md</a>
+</p>
+</section>
+<section id="slide-org7e4e1fc">
+<h3 id="org7e4e1fc">Come chat to us at QFPL :)</h3>
 <p>
 We are here to make this stuff easier. Join us on IRC or drop in upstairs for some coaching.
 </p>
 </section>
 </section>
 <section>
-<section id="slide-org5df5150">
-<h2 id="org5df5150">Thanks!</h2>
+<section id="slide-orga8e2d47">
+<h2 id="orga8e2d47">Thanks!</h2>
 <p>
 <a href="https://haskell-nix.benkolera.com">https://haskell-nix.benkolera.com</a>
 </p>

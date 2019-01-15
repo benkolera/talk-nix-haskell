@@ -13,6 +13,13 @@
  (Note: speaker notes are accessible by pressing "s" or reading the org file directly)
 * What is nix
 ** nix
+   #+ATTR_REVEAL: :frag (appear)
+   - Pure, lazy functional language
+   - Package manager of immutable artifacts
+   - No more mutable global installs of stuff that can interfere with each other
+   #+BEGIN_NOTES
+   -
+   #+END_NOTES
 ** nixpkgs
 * Why Nix?
 ** Reproducability
